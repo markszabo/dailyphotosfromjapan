@@ -16,6 +16,8 @@ CAPTION="Follow for daily photos from all over Japan!
 PHOTOS_FOLDER=photos/
 USED_PHOTOS_FOLDER=usedphotos/
 PUBLIC_URL_PREFIX=https://github.com/markszabo/dailyphotosfromjapan/raw/main/$PHOTOS_FOLDER
+GIT_EMAIL=12611720+markszabo@users.noreply.github.com
+GIT_NAME=dailyphotosfromjapan
 
 # Echo pick a random photo
 echo "Picking random photo"
@@ -44,6 +46,8 @@ mv $PHOTOS_FOLDER$PHOTO $USED_PHOTOS_FOLDER$PHOTO
 
 # Commit and push changes
 echo "Commiting and pushing changes back to the repo"
+git config user.email "$GIT_EMAIL"
+git config user.name "$GIT_NAME"
 git add --all
 git commit -m "Moving uploaded photo $PHOTO"
 git push
