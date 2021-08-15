@@ -1,6 +1,8 @@
 name: upload_photo
 on:
-  workflow_dispatch
+  schedule:
+    - cron:  '7 7 * * *' # UTC, so 4:07pm in Japan
+
 jobs:
   upload_photo:
     runs-on: ubuntu-latest
