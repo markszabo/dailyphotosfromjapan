@@ -14,7 +14,6 @@ CAPTION="Follow for daily photos from all over Japan!
 🗻
 #japan #japaneseculture #japanlife #japan_photo #japangram #instagramjapan #japandaily #instajapan #instadaily #japanpic #japanbestpics #beautifuljapan #japon #ig_japan #japantrip #igjapan #japanlover #travel #tokyo #anime #japanese #art #manga #travel #photography #kyoto #visitjapan #旅行 #日本 #国内旅行"
 PHOTOS_FOLDER=photos/
-USED_PHOTOS_FOLDER=usedphotos/
 PUBLIC_URL_PREFIX=https://github.com/markszabo/dailyphotosfromjapan/raw/main/
 GIT_EMAIL=12611720+markszabo@users.noreply.github.com
 GIT_NAME=dailyphotosfromjapan
@@ -40,9 +39,9 @@ PUBLISH_RESPONSE=$(curl --fail -X POST "https://graph.facebook.com/v10.0/$IG_ACC
 echo "Publish response:"
 echo "$PUBLISH_RESPONSE" # e.g. {"id":"17973968953123456"}
 
-# Move photo
-echo "Moving uploaded photo"
-mv "$PHOTOS_FOLDER$PHOTO" "$USED_PHOTOS_FOLDER$PHOTO"
+# Removing photo
+echo "Removing uploaded photo"
+rm "$PHOTO"
 
 # Commit and push changes
 echo "Commiting and pushing changes back to the repo"
