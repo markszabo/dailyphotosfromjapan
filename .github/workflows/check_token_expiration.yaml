@@ -1,6 +1,6 @@
 name: check_ig_token_expiration
 on:
-  workflow_dispatch
+  workflow_dispatch:
   schedule:
     - cron:  '22 7 * * *' # UTC, so 7:07pm in Japan
 

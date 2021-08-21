@@ -42,7 +42,7 @@ echo "$PUBLISH_RESPONSE" # e.g. {"id":"17973968953123456"}
 
 # Move photo
 echo "Moving uploaded photo"
-mv $PHOTOS_FOLDER$PHOTO $USED_PHOTOS_FOLDER$PHOTO
+mv "$PHOTOS_FOLDER$PHOTO" "$USED_PHOTOS_FOLDER$PHOTO"
 
 # Commit and push changes
 echo "Commiting and pushing changes back to the repo"
