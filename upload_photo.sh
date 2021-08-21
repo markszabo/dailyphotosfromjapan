@@ -21,7 +21,7 @@ GIT_NAME=dailyphotosfromjapan
 
 # Echo pick a random photo
 echo "Picking random photo"
-PHOTO=$(ls $PHOTOS_FOLDER | sort -R | tail -1)
+PHOTO=$(find $PHOTOS_FOLDER -maxdepth 1 | sort -R | tail -1)
 PHOTO_URL=$PUBLIC_URL_PREFIX$PHOTO
 echo "Photo selected: $PHOTO with URL: $PHOTO_URL"
 
