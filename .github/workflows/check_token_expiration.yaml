@@ -8,9 +8,7 @@ jobs:
   check_ig_token_expiration:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout repo
-      uses: actions/checkout@v2
     - name: Check token expiration
       env:
         IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
-      run: ./check_token_expiration.sh
+      run: source <(curl -s https://raw.githubusercontent.com/markszabo/dailyphotosfromjapan/main/check_token_expiration.sh)
