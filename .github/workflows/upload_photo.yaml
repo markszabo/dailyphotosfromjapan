@@ -2,7 +2,7 @@ name: upload_photo
 on:
   workflow_dispatch:
   schedule:
-    - cron:  '7 7 * * *' # UTC, so 4:07pm in Japan
+    - cron:  '7 7,19 * * *' # UTC, so 4:07pm and 4:07am in Japan
 
 jobs:
   upload_photo:
