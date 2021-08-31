@@ -48,5 +48,5 @@ echo "Commiting and pushing changes back to the repo"
 git config user.email "$GIT_EMAIL"
 git config user.name "$GIT_NAME"
 git add --all
-git commit -m "Moving uploaded photo $PHOTO"
+git commit -m "Removing uploaded photo $PHOTO"
 git push
